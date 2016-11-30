@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+      <title>Changelog | BASH3 Boilerplate – Template for writing better Bash scripts | BASH3 Boilerplate</title>
+    
+
+    <title>Changelog | BASH3 Boilerplate – Template for writing better Bash scripts</title>
+    <meta name="keywords" content="bash, template, scripting, command-line">
+    <meta name="description" content="BASH3 Boilerplate">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/build/app.css" media="screen" charset="utf-8">
+  </head>
+  <body>
+    <header>
+      <div id="header-overlay"></div>
+      <a href="/">
+        <span id="logo"></span>
+      </a>
+      <div id="menu">
+        <i class="material-icons">menu</i>
+        <ul id="menu-items">
+        </ul>
+      </div>
+      <span id="more">
+        <i class="material-icons">expand_more</i>
+      </span>
+    </header>
+    <section id="content">
+      
+
+      <h1 id="changelog">Changelog</h1>
+
+<h2 id="master">master</h2>
+
+<p>Released: Unreleased. <a href="https://github.com/kvz/bash3boilerplate/compare/v2.0.0...master">Commit log</a></p>
+
+<ul>
+  <li>Remove OS detection altogether (#38, thx @zbeekman)</li>
+  <li>Offer the main template for download as http://bash3boilerplate.sh/main.sh</li>
+  <li>Better OS detection (#38, thx @moviuro)</li>
+  <li>Improve README copy (#34, thx galaktos)</li>
+  <li>Fix unquoted variable access within (#34 thx galaktos)</li>
+  <li>For delete-key-friendliness, bundle the commandline definition block along with its parser</li>
+  <li>Less verbose header comments</li>
+  <li>For delete-key-friendliness, don’t crash on undeclared help vars</li>
+  <li>Introduce <code class="highlighter-rouge">errtrace</code>, which is on by default (BREAKING)</li>
+  <li>Add a configurable <code class="highlighter-rouge">helptext</code> that is left alone by the parses and allows you to have a richer help</li>
+  <li>Add a simple documentation website</li>
+  <li>Add best practice of using <code class="highlighter-rouge">__double_underscore_prefixed_vars</code> to indicate global variables that are solely controlled inside your script</li>
+  <li>Make license more permissive by not requiring distribution of the LICENSE file if the copyright &amp; attribution comments are left intact</li>
+  <li>Respect <code class="highlighter-rouge">--no-color</code> by setting the <code class="highlighter-rouge">NO_COLOR</code> flag in <code class="highlighter-rouge">main.sh</code> (#25, thx @gdevenyi)</li>
+  <li>Split out changelog into separate file</li>
+  <li>Added a <a href="./FAQ.md">FAQ</a> (#15, #14, thanks @rouson)</li>
+  <li>Fix Travis OSX testing (before, it would silently pass failures) (#10)</li>
+  <li>Enable dashes in long, GNU style options, as well as numbers (thanks @zbeekman)</li>
+</ul>
+
+<h2 id="v210">v2.1.0</h2>
+
+<p>Released: 2016-11-08. <a href="https://github.com/kvz/bash3boilerplate/compare/v2.0.0...v2.1.0">Commit log</a></p>
+
+<ul>
+  <li>Cleanup b3bp variables (adds prefixes across the board) (thanks @mstreuhofer)</li>
+  <li>Add multi-line logging support (thanks @mstreuhofer)</li>
+  <li>Mangle long-option names to allow dashes (thanks @zbeekman)</li>
+</ul>
+
+<h2 id="v200">v2.0.0</h2>
+
+<p>Released: 2016-02-17. <a href="https://github.com/kvz/bash3boilerplate/compare/v1.2.1...v2.0.0">Commit log</a></p>
+
+<ul>
+  <li>Add tests for <code class="highlighter-rouge">templater</code> and follow Library export best practices</li>
+  <li>Add tests for <code class="highlighter-rouge">ini_val</code> and follow Library export best practices</li>
+  <li>Add tests for <code class="highlighter-rouge">parse_url</code> and follow Library export best practices</li>
+  <li>Add tests for <code class="highlighter-rouge">megamount</code> and follow Library export best practices</li>
+  <li>Remove <code class="highlighter-rouge">bump</code> from <code class="highlighter-rouge">src</code> (BREAKING)</li>
+  <li>Remove <code class="highlighter-rouge">semver</code> from <code class="highlighter-rouge">src</code> (BREAKING)</li>
+</ul>
+
+<h2 id="v121">v1.2.1</h2>
+
+<p>Released: 2016-02-17. <a href="https://github.com/kvz/bash3boilerplate/compare/v1.2.0...v1.2.1">Commit log</a></p>
+
+<ul>
+  <li>Add Travis CI automated testing for OSX (thanks @zbeekman)</li>
+</ul>
+
+<h2 id="v120">v1.2.0</h2>
+
+<p>Released: 2016-02-16. <a href="https://github.com/kvz/bash3boilerplate/compare/v1.1.0...v1.2.0">Commit log</a></p>
+
+<ul>
+  <li>Allow disabling colors via <code class="highlighter-rouge">NO_COLOR</code> environment variable</li>
+  <li>Enable <code class="highlighter-rouge">errexit</code>, <code class="highlighter-rouge">nounset</code> and <code class="highlighter-rouge">pipefail</code> options at the top of the script already</li>
+  <li>More refined colors (thanks @arathai)</li>
+  <li>Add a changelog to the README</li>
+  <li>Add <code class="highlighter-rouge">__os</code> magic var (limited to discovering OSX and defaulting to Linux for now)</li>
+  <li>Add <code class="highlighter-rouge">__base</code> magic var (<code class="highlighter-rouge">main</code>, if the source script is <code class="highlighter-rouge">main.sh</code>)</li>
+  <li>Enable long, GNU style options (thanks @zbeekman)</li>
+  <li>Add Travis CI automated testing for Linux</li>
+</ul>
+
+<h2 id="v110">v1.1.0</h2>
+
+<p>Released: 2015-06-29. <a href="https://github.com/kvz/bash3boilerplate/compare/v1.0.3...v1.1.0">Commit log</a></p>
+
+<ul>
+  <li>Add <code class="highlighter-rouge">ALLOW_REMAINDERS</code> configuration to templater</li>
+  <li>Fix typo: ‘debugmdoe’ to ‘debugmode’ (thanks @jokajak)</li>
+  <li>Use <code class="highlighter-rouge">${BASH_SOURCE[0]}</code> for <code class="highlighter-rouge">__file</code> instead of <code class="highlighter-rouge">${0}</code></li>
+</ul>
+
+<h2 id="v103">v1.0.3</h2>
+
+<p>Released: 2014-11-02. <a href="https://github.com/kvz/bash3boilerplate/compare/5db569125319a89b9561b434db84e4d91faefb63...v1.0.3">Commit log</a></p>
+
+<ul>
+  <li>Add <code class="highlighter-rouge">ini_val</code>, <code class="highlighter-rouge">megamount</code>, <code class="highlighter-rouge">parse_url</code></li>
+  <li>Add re-usable libraries in <code class="highlighter-rouge">./src</code></li>
+  <li>Use npm as an additional distribution channel</li>
+</ul>
+
+<p><a href="/">« Home</a></p>
+
+
+      
+
+      <div class="Social">
+        <iframe src="http://ghbtns.com/github-btn.html?user=kvz&repo=bash3boilerplate&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+      </div>
+
+      <p>
+        <small>
+          <hr />
+          Website design based on
+          the wonderful <a href="http://apex.run">apex.run</a>
+          with <a href="https://twitter.com/tjholowaychuk/status/744909762865696769">the author's consent</a>.
+        </small>
+      </p>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/languages/bash.min.js"></script>
+    <script src="/assets/build/app.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-63083-13', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
