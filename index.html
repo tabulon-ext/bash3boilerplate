@@ -6,12 +6,11 @@
       <title>BASH3 Boilerplate – Template for writing better Bash scripts</title>
     
 
-    <title>BASH3 Boilerplate – Template for writing better Bash scripts</title>
     <meta name="keywords" content="bash, template, scripting, command-line">
     <meta name="description" content="BASH3 Boilerplate">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/build/app.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="/assets/build/app.8a25c6b400a603da7219.css" media="screen" charset="utf-8">
   </head>
   <body>
     <header>
@@ -150,9 +149,11 @@ npm install --save --save-exact bash3boilerplate
 <h3 id="coding-style">Coding style</h3>
 
 <ol>
-  <li>Use two spaces for tabs.</li>
+  <li>Use two spaces for tabs, do not use tab characters.</li>
+  <li>Do not introduce whitespace at the end of lines or on blank lines as they obfuscate version control diffs.</li>
   <li>Use long options (<code class="highlighter-rouge">logger --priority</code> vs <code class="highlighter-rouge">logger -p</code>). If you are on the CLI, abbreviations make sense for efficiency. Nevertheless, when you are writing reusable scripts, a few extra keystrokes will pay off in readability and avoid ventures into man pages in the future, either by you or your collaborators. Similarly, we prefer <code class="highlighter-rouge">set -o nounset</code> over <code class="highlighter-rouge">set -u</code>.</li>
-  <li>Use a single equal sign when checking <code class="highlighter-rouge">if [ "${NAME}" = "Kevin" ]</code>; double or triple signs are not needed.</li>
+  <li>Use a single equal sign when checking <code class="highlighter-rouge">if [[ "${NAME}" = "Kevin" ]]</code>; double or triple signs are not needed.</li>
+  <li>Use the new bash builtin test operator (<code class="highlighter-rouge">[[ ... ]]</code>) rather than the old single square bracket test operator or explicit call to <code class="highlighter-rouge">test</code>.</li>
 </ol>
 
 <h3 id="safety-and-portability">Safety and Portability</h3>
@@ -182,7 +183,7 @@ npm install --save --save-exact bash3boilerplate
   <li><a href="http://kvz.io">Kevin van Zonneveld</a></li>
   <li><a href="https://izaakbeekman.com/">Izaak Beekman</a></li>
   <li><a href="https://github.com/mstreuhofer">Manuel Streuhofer</a></li>
-  <li><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#065;&#108;&#101;&#120;&#097;&#110;&#100;&#101;&#114;&#046;&#082;&#097;&#116;&#104;&#097;&#105;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">Alexander Rathai</a></li>
+  <li><a href="mailto:Alexander.Rathai@gmail.com">Alexander Rathai</a></li>
   <li><a href="http://www.sourceryinstitute.org/">Dr. Damian Rouson</a> (documentation, feedback)</li>
   <li><a href="https://github.com/jokajak">@jokajak</a> (documentation)</li>
   <li><a href="http://staticwave.ca/">Gabriel A. Devenyi</a> (feedback)</li>
@@ -230,17 +231,17 @@ as you leave these references intact in the header comments of your source files
         </small>
       </p>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/languages/bash.min.js"></script>
-    <script src="/assets/build/app.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/languages/bash.min.js"></script>
+  <script async src="/assets/build/app.8a25c6b400a603da7219.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-63083-13', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </body>
+    ga('create', 'UA-63083-13', 'auto');
+    ga('send', 'pageview');
+  </script>
 </html>
